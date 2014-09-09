@@ -39,7 +39,7 @@ else
     repo sync
 fi
 cd ~/kernel/toolchains
-if [ -f ~/kernel/KKernel/README.md ]; then
+if [ -f ~/kernel/toolchains/README.md ]; then
     repo sync
 else
     repo init -u git@github.com:Christopher83/linaro_toolchains_2014.git -b 2014.08
