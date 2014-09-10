@@ -31,7 +31,8 @@ mkdir  ~/kernel/KKernel/temp/ancora_tmo_oc_uv_sm_defconfig/system/modules
 mkdir  ~/kernel/KKernel/temp/ancora_tmo_oc_uv_vhm_defconfig/system/modules
 mkdir  ~/kernel/ADC/temp/ancora_tmo_defconfig/system/modules
 
-/system/modules
+#unpack original boot image
+unmkbootimg ~/kernel/boot.img 
 
 #Download/Update Kernels
 cd ~/kernel/KKernel
@@ -76,6 +77,7 @@ cp  ~/kernel/KKernel/build/drivers/crypto/msm/qcedev.ko ~/kernel/KKernel/temp/an
 cp  ~/kernel/KKernel/build/drivers/crypto/msm/qcrypto.ko ~/kernel/KKernel/temp/ancora_tmo_defconfig/system/modules/qcrypto.ko
 make clean
 cd ~/kernel/KKernel/temp/ancora_tmo_defconfig/
+"~/kernel/kernel tools/mkbootimg" --kernel zImage --ramdisk ~/kernel/initramfs.cpio.gz --base 0x00400000 --pagesize 4096 --cmdline 'init=/sbin/init root=/dev/ram rw initrd=0x11000000,16M console=ttyDCC0 mem=88M ip=dhcp' -o boot.img
 zip -r KKernel-`date +%Y%m%d_%H%M`-oc.zip ~/kernel/KKernel/temp/ancora_tmo_defconfig
 zip -d KKernel-`date +%Y%m%d_%H%M`-oc.zip "zImage"
 
@@ -95,6 +97,7 @@ cp  ~/kernel/KKernel/build/drivers/crypto/msm/qcedev.ko ~/kernel/KKernel/temp/an
 cp  ~/kernel/KKernel/build/drivers/crypto/msm/qcrypto.ko ~/kernel/KKernel/temp/ancora_tmo_oc_exuv_hm_defconfig/system/modules/qcrypto.ko
 make clean
 cd ~/kernel/KKernel/temp/ancora_tmo_oc_exuv_hm_defconfig
+"~/kernel/kernel tools/mkbootimg" --kernel zImage --ramdisk ~/kernel/initramfs.cpio.gz --base 0x00400000 --pagesize 4096 --cmdline 'init=/sbin/init root=/dev/ram rw initrd=0x11000000,16M console=ttyDCC0 mem=88M ip=dhcp' -o boot.img
 zip -r KKernel-`date +%Y%m%d_%H%M`-oc-exuv-hm.zip ~/kernel/KKernel/temp/ancora_tmo_oc_exuv_hm_defconfig
 zip -d KKernel-`date +%Y%m%d_%H%M`-oc-exuv-hm.zip "zImage"
 
@@ -114,6 +117,7 @@ cp  ~/kernel/KKernel/build/drivers/crypto/msm/qcedev.ko ~/kernel/KKernel/temp/an
 cp  ~/kernel/KKernel/build/drivers/crypto/msm/qcrypto.ko ~/kernel/KKernel/temp/ancora_tmo_oc_exuv_sm_defconfig/system/modules/qcrypto.ko
 make clean
 cd ~/kernel/KKernel/temp/ancora_tmo_oc_exuv_sm_defconfig
+"~/kernel/kernel tools/mkbootimg" --kernel zImage --ramdisk ~/kernel/initramfs.cpio.gz --base 0x00400000 --pagesize 4096 --cmdline 'init=/sbin/init root=/dev/ram rw initrd=0x11000000,16M console=ttyDCC0 mem=88M ip=dhcp' -o boot.img
 zip -r KKernel-`date +%Y%m%d_%H%M`-oc-exuv-sm.zip ~/kernel/KKernel/temp/ancora_tmo_oc_exuv_sm_defconfig
 zip -d KKernel-`date +%Y%m%d_%H%M`-oc-exuv-sm.zip "zImage"
 
@@ -133,6 +137,7 @@ cp  ~/kernel/KKernel/build/drivers/crypto/msm/qcedev.ko ~/kernel/KKernel/temp/an
 cp  ~/kernel/KKernel/build/drivers/crypto/msm/qcrypto.ko ~/kernel/KKernel/temp/ancora_tmo_oc_exuv_vhm_defconfig/system/modules/qcrypto.ko
 make clean
 cd ~/kernel/KKernel/temp/ancora_tmo_oc_exuv_vhm_defconfig
+"~/kernel/kernel tools/mkbootimg" --kernel zImage --ramdisk ~/kernel/initramfs.cpio.gz --base 0x00400000 --pagesize 4096 --cmdline 'init=/sbin/init root=/dev/ram rw initrd=0x11000000,16M console=ttyDCC0 mem=88M ip=dhcp' -o boot.img
 zip -r KKernel-`date +%Y%m%d_%H%M`-oc-exuv-vhm.zip ~/kernel/KKernel/temp/ancora_tmo_oc_exuv_vhm_defconfig
 zip -d KKernel-`date +%Y%m%d_%H%M`-oc-exuv-vhm.zip "zImage"
 
@@ -152,6 +157,7 @@ zip -d KKernel-`date +%Y%m%d_%H%M`-oc-exuv-vhm.zip "zImage"
 #cp  ~/kernel/KKernel/build/drivers/crypto/msm/qcrypto.ko ~/kernel/KKernel/temp/#ancora_tmo_oc_exuv_xhm_defconfig/system/modules/qcrypto.ko
 #make clean
 #cd ~/kernel/KKernel/temp/ancora_tmo_oc_exuv_xhm_defconfig
+#"~/kernel/kernel tools/mkbootimg" --kernel zImage --ramdisk ~/kernel/initramfs.cpio.gz --base 0x00400000 --pagesize 4096 --cmdline 'init=/sbin/init root=/dev/ram rw initrd=0x11000000,16M console=ttyDCC0 mem=88M ip=dhcp' -o boot.img
 #zip -r KKernel-`date +%Y%m%d_%H%M`-oc-exuv-xhm.zip ~/kernel/KKernel/temp/ancora_tmo_oc_exuv_xhm_defconfig
 #zip -d KKernel-`date +%Y%m%d_%H%M`-oc-exuv-xhm.zip "zImage"
 
@@ -171,6 +177,7 @@ cp  ~/kernel/KKernel/build/drivers/crypto/msm/qcedev.ko ~/kernel/KKernel/temp/an
 cp  ~/kernel/KKernel/build/drivers/crypto/msm/qcrypto.ko ~/kernel/KKernel/temp/ancora_tmo_oc_uv_hm_defconfig/system/modules/qcrypto.ko
 make clean
 cd ~/kernel/KKernel/temp/ancora_tmo_oc_uv_hm_defconfig
+"~/kernel/kernel tools/mkbootimg" --kernel zImage --ramdisk ~/kernel/initramfs.cpio.gz --base 0x00400000 --pagesize 4096 --cmdline 'init=/sbin/init root=/dev/ram rw initrd=0x11000000,16M console=ttyDCC0 mem=88M ip=dhcp' -o boot.img
 zip -r KKernel-`date +%Y%m%d_%H%M`-oc-uv-hm.zip ~/kernel/KKernel/temp/ancora_tmo_oc_uv_hm_defconfig
 zip -d KKernel-`date +%Y%m%d_%H%M`-oc-uv-hm.zip "zImage"
 
@@ -190,6 +197,7 @@ cp  ~/kernel/KKernel/build/drivers/crypto/msm/qcedev.ko ~/kernel/KKernel/temp/an
 cp  ~/kernel/KKernel/build/drivers/crypto/msm/qcrypto.ko ~/kernel/KKernel/temp/ancora_tmo_oc_uv_sm_defconfig/system/modules/qcrypto.ko
 make clean
 cd ~/kernel/KKernel/temp/ancora_tmo_oc_uv_sm_defconfig
+"~/kernel/kernel tools/mkbootimg" --kernel zImage --ramdisk ~/kernel/initramfs.cpio.gz --base 0x00400000 --pagesize 4096 --cmdline 'init=/sbin/init root=/dev/ram rw initrd=0x11000000,16M console=ttyDCC0 mem=88M ip=dhcp' -o boot.img
 zip -r KKernel-`date +%Y%m%d_%H%M`-oc-uv-sm.zip ~/kernel/KKernel/temp/ancora_tmo_oc_uv_sm_defconfig
 zip -d KKernel-`date +%Y%m%d_%H%M`-oc-uv-sm.zip "zImage"
 
@@ -209,6 +217,7 @@ cp  ~/kernel/KKernel/build/drivers/crypto/msm/qcedev.ko ~/kernel/KKernel/temp/an
 cp  ~/kernel/KKernel/build/drivers/crypto/msm/qcrypto.ko ~/kernel/KKernel/temp/ancora_tmo_oc_uv_vhm_defconfig/system/modules/qcrypto.ko
 make clean
 cd ~/kernel/KKernel/temp/ancora_tmo_oc_uv_vhm_defconfig
+"~/kernel/kernel tools/mkbootimg" --kernel zImage --ramdisk ~/kernel/initramfs.cpio.gz --base 0x00400000 --pagesize 4096 --cmdline 'init=/sbin/init root=/dev/ram rw initrd=0x11000000,16M console=ttyDCC0 mem=88M ip=dhcp' -o boot.img
 zip -r KKernel-`date +%Y%m%d_%H%M`-oc-uv-vhm.zip ~/kernel/KKernel/temp/ancora_tmo_oc_uv_vhm_defconfig
 zip -d KKernel-`date +%Y%m%d_%H%M`-oc-uv-vhm.zip "zImage"
 
@@ -228,6 +237,7 @@ zip -d KKernel-`date +%Y%m%d_%H%M`-oc-uv-vhm.zip "zImage"
 #cp  ~/kernel/KKernel/build/drivers/crypto/msm/qcrypto.ko ~/kernel/KKernel/temp/#ancora_tmo_oc_uv_xhm_defconfig/system/modules/qcrypto.ko
 #make clean
 #cd ~/kernel/KKernel/temp/ancora_tmo_oc_uv_xhm_defconfig
+#"~/kernel/kernel tools/mkbootimg" --kernel zImage --ramdisk ~/kernel/initramfs.cpio.gz --base 0x00400000 --pagesize 4096 --cmdline 'init=/sbin/init root=/dev/ram rw initrd=0x11000000,16M console=ttyDCC0 mem=88M ip=dhcp' -o boot.img
 #zip -r KKernel`date +%Y%m%d_%H%M`-oc-uv-xhm.zip ~/kernel/KKernel/temp/ancora_tmo_oc_uv_xhm_defconfig
 #zip -d KKernel-`date +%Y%m%d_%H%M`-oc-uv-xhm.zip "zImage"
 
@@ -250,6 +260,7 @@ cp  ~/kernel/ADC/build/drivers/crypto/msm/qcedev.ko ~/kernel/ADC/temp/ancora_tmo
 cp  ~/kernel/ADC/build/drivers/crypto/msm/qcrypto.ko ~/kernel/ADC/temp/ancora_tmo_defconfig/system/modules/qcrypto.ko
 make clean
 cd ~/kernel/ADC/temp/ancora_tmo_defconfig
+"~/kernel/kernel tools/mkbootimg" --kernel zImage --ramdisk ~/kernel/initramfs.cpio.gz --base 0x00400000 --pagesize 4096 --cmdline 'init=/sbin/init root=/dev/ram rw initrd=0x11000000,16M console=ttyDCC0 mem=88M ip=dhcp' -o boot.img
 zip -r ADCKernel-`date +%Y%m%d_%H%M`-oc.zip ~/kernel/KKernel/temp/ancora_tmo_defconfig
 zip -d ADCKernel-`date +%Y%m%d_%H%M`-oc.zip "zImage"
 
