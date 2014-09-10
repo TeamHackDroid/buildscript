@@ -1,6 +1,6 @@
 #!/bin/sh
 
-#Get number of proccessors
+#Get number of processors
 NPROC=$(nproc)
 
 #Clean Temp Dirs
