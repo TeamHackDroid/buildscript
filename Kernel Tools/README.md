@@ -13,6 +13,7 @@ to use the script, just follow steps:
         then follow the menu by typing the number of the option you want.
 
 TODO: 
-1.Check scripts for errors
-2.Make portion for signing zips(if needed?)
-3.Make generic edify script to include in each zip
+
+    1.Check scripts for errors
+    2.Make portion for signing zips(if needed?)
+    3.Make generic edify script to include in each zip
