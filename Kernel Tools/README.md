@@ -4,6 +4,7 @@ Kernel Build Scripts
 Build script tool to make compiling more simple
 
 to use the script, just follow steps:
+
     1-Download as zip then extract and copy kernel menu.sh to ~/kernel.
     2-Type chmod a+x "kernel menu.sh".
     3-To run the script just type:
