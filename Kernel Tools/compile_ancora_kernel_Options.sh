@@ -6,13 +6,12 @@ echo
 echo "================================================================="
 echo " Kernel Build Tool - by cars1189 (xda-developers.com) aka Doadin"
 echo "================================================================="
-echo " Version 0.0.1"
 echo
 echo "> MAIN MENU"
 echo
-echo "  1 - Build All Ancora_TMO Kernels Options(Galaxy Exhibit 4G)"
-echo "  2 - Build All Ancora Kernels Options(Galaxy W)"
-echo "  3 - Build All Ariesve Kernels Options(Galaxy S Plus GT-I9001))"
+echo "  1 - Build All Ancora_TMO Linaro Kernels(Galaxy Exhibit 4G)"
+echo "  2 - Build All Ancora_TMO K^Kernels"
+echo "  3 - Build Ancora_TMO ADC/Linaro Kernel"
 echo
 echo
 echo "  x - Exit"
@@ -23,9 +22,9 @@ options=("1" "2" "3" "x")
 select opt in "${options[@]}"
 do
     case $opt in
-      1) compile_ancora_tmo_kernel_Options;;
-      2) compile_ancora_kernels_Options;;
-      3) compile_ariesve_kernels_Options;;
+      1) compile_all_ancora_kernels;;
+      2) compile_all_kkernel_ancora_kernels;;
+      3) compile_adc_ancora_kernel;;
       x) exit
       *) echo "Invalid option"; continue;;
     esac
