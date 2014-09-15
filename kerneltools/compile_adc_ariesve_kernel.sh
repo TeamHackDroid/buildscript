@@ -21,7 +21,7 @@ cd ~/kernel/ADC
 if [ -f ~/kernel/ADC/Makefile ]; then
     repo sync
 else
-  repo init -u git://github.com:AriesVE-DevCon-TEAM/kerneltools_manifest -b adc
+  repo init -u git://github.com/Doadin/kerneltools_manifest -b adc
   repo sync
 fi
 cd ~/kernel/toolchains
