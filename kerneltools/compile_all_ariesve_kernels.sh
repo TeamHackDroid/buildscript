@@ -50,21 +50,21 @@ cd ~/kernel/KKernel
 if [ -f ~/kernel/KKernel/Makefile ]; then
     repo sync
 else
-  repo init -u git://github.com:Christopher83/samsung-kernel-msm7x30.git -b cm-11.0
+  repo init -u git://github.com/Doadin/kerneltools_manifest -b kkernel
   repo sync
 fi
 cd ~/kernel/ADC
 if [ -f ~/kernel/ADC/Makefile ]; then
     repo sync
 else
-  repo init -u git://github.com:AriesVE-DevCon-TEAM/samsung-kernel-msm7x30.git -b cm-11.0
+  repo init -u git://github.com/Doadin/kerneltools_manifest -b adc
   repo sync
 fi
 cd ~/kernel/toolchains
 if [ -f ~/kernel/toolchains/README.md ]; then
     repo sync
 else
-  repo init -u git@github.com:Christopher83/linaro_toolchains_2014.git -b 2014.08
+  repo init -u git://github.com/Doadin/kerneltools_manifest -b toolchain
   repo sync
 fi
 ##Notes
@@ -76,7 +76,7 @@ cd ~/kernel/KKernel/build
 make clean
 export ARCH=arm
 export SUBARCH=arm
-export CROSS_COMPILE=~/kernel/toolchains/linaro_toolchains_2014-2014.08/arm-cortex_a8-linux-gnueabi-linaro_4.9.2-2014.08/bin/arm-cortex_a8-linux-gnueabi-
+export CROSS_COMPILE=~/kernel/toolchains/linaro_toolchains_2014-toolchain/arm-cortex_a8-linux-gnueabi-linaro_4.9.2-toolchain/bin/arm-cortex_a8-linux-gnueabi-
 make ariesve_defconfig
 make -j$NPROC
 cp ~/kernel/KKernel/build/arch/arm/boot/zImage ~/kernel/KKernel/temp/ariesve_defconfig/zImage
@@ -98,7 +98,7 @@ java -jar ~/kernel/kerneltools/signapk.jar ~/kernel/kerneltools/testkey.x509.pem
 make clean
 export ARCH=arm
 export SUBARCH=arm
-export CROSS_COMPILE=~/kernel/toolchains/linaro_toolchains_2014-2014.08/arm-cortex_a8-linux-gnueabi-linaro_4.9.2-2014.08/bin/arm-cortex_a8-linux-gnueabi-
+export CROSS_COMPILE=~/kernel/toolchains/linaro_toolchains_2014-toolchain/arm-cortex_a8-linux-gnueabi-linaro_4.9.2-toolchain/bin/arm-cortex_a8-linux-gnueabi-
 make ariesve_oc_exuv_hm_defconfig
 make -j$NPROC
 cp ~/kernel/KKernel/build/arch/arm/boot/zImage ~/kernel/KKernel/temp/ariesve_oc_exuv_hm_defconfig/zImage
@@ -120,7 +120,7 @@ java -jar ~/kernel/kerneltools/signapk.jar ~/kernel/kerneltools/testkey.x509.pem
 make clean
 export ARCH=arm
 export SUBARCH=arm
-export CROSS_COMPILE=~/kernel/toolchains/linaro_toolchains_2014-2014.08/arm-cortex_a8-linux-gnueabi-linaro_4.9.2-2014.08/bin/arm-cortex_a8-linux-gnueabi-
+export CROSS_COMPILE=~/kernel/toolchains/linaro_toolchains_2014-toolchain/arm-cortex_a8-linux-gnueabi-linaro_4.9.2-toolchain/bin/arm-cortex_a8-linux-gnueabi-
 make ariesve_oc_exuv_sm_defconfig
 make -j$NPROC
 cp ~/kernel/KKernel/build/arch/arm/boot/zImage ~/kernel/KKernel/temp/ariesve_oc_exuv_sm_defconfig/zImage
@@ -142,7 +142,7 @@ java -jar ~/kernel/kerneltools/signapk.jar ~/kernel/kerneltools/testkey.x509.pem
 make clean
 export ARCH=arm
 export SUBARCH=arm
-export CROSS_COMPILE=~/kernel/toolchains/linaro_toolchains_2014-2014.08/arm-cortex_a8-linux-gnueabi-linaro_4.9.2-2014.08/bin/arm-cortex_a8-linux-gnueabi-
+export CROSS_COMPILE=~/kernel/toolchains/linaro_toolchains_2014-toolchain/arm-cortex_a8-linux-gnueabi-linaro_4.9.2-toolchain/bin/arm-cortex_a8-linux-gnueabi-
 make ariesve_oc_exuv_vhm_defconfig
 make -j$NPROC
 cp ~/kernel/KKernel/build/arch/arm/boot/zImage ~/kernel/KKernel/temp/ariesve_oc_exuv_vhm_defconfig/zImage
@@ -186,7 +186,7 @@ java -jar ~/kernel/kerneltools/signapk.jar ~/kernel/kerneltools/testkey.x509.pem
 make clean
 export ARCH=arm
 export SUBARCH=arm
-export CROSS_COMPILE=~/kernel/toolchains/linaro_toolchains_2014-2014.08/arm-cortex_a8-linux-gnueabi-linaro_4.9.2-2014.08/bin/arm-cortex_a8-linux-gnueabi-
+export CROSS_COMPILE=~/kernel/toolchains/linaro_toolchains_2014-toolchain/arm-cortex_a8-linux-gnueabi-linaro_4.9.2-toolchain/bin/arm-cortex_a8-linux-gnueabi-
 make ariesve_oc_uv_hm_defconfig
 make -j$NPROC
 cp ~/kernel/KKernel/build/arch/arm/boot/zImage ~/kernel/KKernel/temp/ariesve_oc_uv_hm_defconfig/zImage
@@ -208,7 +208,7 @@ java -jar ~/kernel/kerneltools/signapk.jar ~/kernel/kerneltools/testkey.x509.pem
 make clean
 export ARCH=arm
 export SUBARCH=arm
-export CROSS_COMPILE=~/kernel/toolchains/linaro_toolchains_2014-2014.08/arm-cortex_a8-linux-gnueabi-linaro_4.9.2-2014.08/bin/arm-cortex_a8-linux-gnueabi-
+export CROSS_COMPILE=~/kernel/toolchains/linaro_toolchains_2014-toolchain/arm-cortex_a8-linux-gnueabi-linaro_4.9.2-toolchain/bin/arm-cortex_a8-linux-gnueabi-
 make ariesve_oc_uv_sm_defconfig
 make -j$NPROC
 cp ~/kernel/KKernel/build/arch/arm/boot/zImage ~/kernel/KKernel/temp/ariesve_oc_uv_sm_defconfig/zImage
@@ -230,7 +230,7 @@ java -jar ~/kernel/kerneltools/signapk.jar ~/kernel/kerneltools/testkey.x509.pem
 make clean
 export ARCH=arm
 export SUBARCH=arm
-export CROSS_COMPILE=~/kernel/toolchains/linaro_toolchains_2014-2014.08/arm-cortex_a8-linux-gnueabi-linaro_4.9.2-2014.08/bin/arm-cortex_a8-linux-gnueabi-
+export CROSS_COMPILE=~/kernel/toolchains/linaro_toolchains_2014-toolchain/arm-cortex_a8-linux-gnueabi-linaro_4.9.2-toolchain/bin/arm-cortex_a8-linux-gnueabi-
 make ariesve_oc_uv_vhm_defconfig
 make -j$NPROC
 cp ~/kernel/KKernel/build/arch/arm/boot/zImage ~/kernel/KKernel/temp/ariesve_oc_uv_vhm_defconfig/zImage
@@ -277,7 +277,7 @@ cd ~/kernel/ADC/build
 make clean
 export ARCH=arm
 export SUBARCH=arm
-export CROSS_COMPILE=~/kernel/toolchains/linaro_toolchains_2014-2014.08/arm-cortex_a8-linux-gnueabi-linaro_4.9.2-2014.08/bin/arm-cortex_a8-linux-gnueabi-
+export CROSS_COMPILE=~/kernel/toolchains/linaro_toolchains_2014-toolchain/arm-cortex_a8-linux-gnueabi-linaro_4.9.2-toolchain/bin/arm-cortex_a8-linux-gnueabi-
 make ariesve_defconfig
 make -j$NPROC
 cp ~/kernel/ADC/build/arch/arm/boot/zImage ~/kernel/ADC/temp/ariesve_defconfig/zImage

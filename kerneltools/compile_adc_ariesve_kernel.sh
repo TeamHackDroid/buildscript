@@ -21,14 +21,14 @@ cd ~/kernel/ADC
 if [ -f ~/kernel/ADC/Makefile ]; then
     repo sync
 else
-  repo init -u git://github.com:AriesVE-DevCon-TEAM/samsung-kernel-msm7x30.git -b cm-11.0
+  repo init -u git://github.com:AriesVE-DevCon-TEAM/kerneltools_manifest -b adc
   repo sync
 fi
 cd ~/kernel/toolchains
 if [ -f ~/kernel/toolchains/README.md ]; then
     repo sync
 else
-  repo init -u git@github.com:Christopher83/linaro_toolchains_2014.git -b 2014.08
+  repo init -u git://github.com/Doadin/kerneltools_manifest -b toolchain
   repo sync
 fi
 ##Notes
@@ -41,7 +41,7 @@ cd ~/kernel/ADC/build
 make clean
 export ARCH=arm
 export SUBARCH=arm
-export CROSS_COMPILE=~/kernel/toolchains/linaro_toolchains_2014-2014.08/arm-cortex_a8-linux-gnueabi-linaro_4.9.2-2014.08/bin/arm-cortex_a8-linux-gnueabi-
+export CROSS_COMPILE=~/kernel/toolchains/linaro_toolchains_2014-toolchain/arm-cortex_a8-linux-gnueabi-linaro_4.9.2-toolchain/bin/arm-cortex_a8-linux-gnueabi-
 make ariesve_defconfig
 make -j$NPROC
 cp ~/kernel/ADC/build/arch/arm/boot/zImage ~/kernel/ADC/temp/ariesve_defconfig/zImage
