@@ -15,5 +15,4 @@ to use the script, just follow steps:
 TODO: 
 
     1.Check scripts for errors
-    2.Make portion for signing zips(if needed?)
-    3.Make generic edify script to include in each zip
+    2.Make device specific flash scripts
