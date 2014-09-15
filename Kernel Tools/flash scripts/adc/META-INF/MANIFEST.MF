@@ -1,0 +1,30 @@
+Manifest-Version: 1.0
+Created-By: 1.0 (Android SignApk)
+
+Name: boot.img
+SHA1-Digest: JCChtNMZzB2PQWzLlTRNofCLu6I=
+
+Name: system/lib/modules/scsi_wait_scan.ko
+SHA1-Digest: /OlYExUhphNUDJrRspHYyXmlXZg=
+
+Name: META-INF/com/google/android/updater-script
+SHA1-Digest: jsDYFyOkTGowjWyI/LVpz3LkqYE=
+
+Name: system/lib/modules/qcedev.ko
+SHA1-Digest: gAjcKbncy5uAhtyETzsvzWDPmYk=
+
+Name: system/lib/modules/qcrypto.ko
+SHA1-Digest: oKUbvPNiPZJohJeP7FXS5aIEom0=
+
+Name: system/lib/modules/dhd.ko
+SHA1-Digest: uMhifJGTGQgDhMnCLgMeop1wrWU=
+
+Name: META-INF/com/google/android/update-binary
+SHA1-Digest: K6Epekh0FuXAFwIFv0zwEHBcVng=
+
+Name: system/lib/modules/qce.ko
+SHA1-Digest: XRP6kHen85LOO7dwkPc3i4emgco=
+
+Name: system/lib/modules/cifs.ko
+SHA1-Digest: Qw9dFGwXOcY0gbXmK9QeKI/KfG8=
+
