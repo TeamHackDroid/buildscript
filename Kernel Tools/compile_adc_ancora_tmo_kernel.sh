@@ -11,7 +11,7 @@ mkdir  ~/kernel
 mkdir  ~/kernel/ADC
 mkdir  ~/kernel/ADC/temp/ancora_tmo_defconfig/
 mkdir  ~/kernel/ADC/temp/ancora_tmo_defconfig/system/modules
-cp -avr ~/kernel/kernel tools/flash scripts/adc ~/kernel/ADC/temp/ancora_tmo_defconfig/
+cp -avr ~/kernel/kerneltools/flash scripts/adc ~/kernel/ADC/temp/ancora_tmo_defconfig/
 
 #unpack original boot image
 unmkbootimg ~/kernel/boot.img 
@@ -32,7 +32,7 @@ else
     repo sync
 fi
 ##Notes
-##zip -R `date +%Y%m%d_%H%M`.zip *.txt
+##zip -R `date +%Y%m%d`.zip *.txt
 
 #Make Default ADC
 #Make ancora_tmo_defconfig
@@ -52,11 +52,11 @@ cp  ~/kernel/ADC/build/drivers/crypto/msm/qce.ko ~/kernel/ADC/temp/ancora_tmo_de
 cp  ~/kernel/ADC/build/drivers/crypto/msm/qcedev.ko ~/kernel/ADC/temp/ancora_tmo_defconfig/system/modules/qcedev.ko
 cp  ~/kernel/ADC/build/drivers/crypto/msm/qcrypto.ko ~/kernel/ADC/temp/ancora_tmo_defconfig/system/modules/qcrypto.ko
 make clean
-cd ~/kernel/kernel tools/
+cd ~/kernel/kerneltools/
 mkbootimg --kernel ~/kernel/ADC/temp/ancora_tmo_defconfig/zImage --ramdisk ~/kernel/initramfs.cpio.gz --base 0x00400000 --pagesize 4096 --cmdline 'init=/sbin/init root=/dev/ram rw initrd=0x11000000,16M console=ttyDCC0 mem=88M ip=dhcp' -o ~/kernel/ADC/temp/ancora_tmo_defconfig/boot.img
 cd ~/kernel/ADC/temp/ancora_tmo_defconfig
-zip -r ADCKernel-`date +%Y%m%d_%H%M`-oc.zip ~/kernel/KKernel/temp/ancora_tmo_defconfig
-zip -d ADCKernel-`date +%Y%m%d_%H%M`-oc.zip "zImage"
-java -jar ~/kernel/kernel tools/signapk.jar ~/kernel/kernel tools/testkey.x509.pem ~/kernel/kernel tools/testkey.pk8 <ADCKernel-`date +%Y%m%d_%H%M`-oc.zip> <ADCKernel-`date +%Y%m%d_%H%M`-oc_signed.zip>
+zip -r ADCKernel-`date +%Y%m%d`-oc.zip ~/kernel/KKernel/temp/ancora_tmo_defconfig
+zip -d ADCKernel-`date +%Y%m%d`-oc.zip "zImage"
+java -jar ~/kernel/kerneltools/signapk.jar ~/kernel/kerneltools/testkey.x509.pem ~/kernel/kerneltools/testkey.pk8 ADCKernel-`date +%Y%m%d`-oc.zip ADCKernel-`date +%Y%m%d`-oc_signed.zip
 
 
