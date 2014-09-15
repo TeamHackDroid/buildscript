@@ -11,7 +11,7 @@ mkdir -p ~/kernel
 mkdir -p ~/kernel/ADC
 mkdir -p ~/kernel/ADC/temp/ancora_tmo_defconfig/
 mkdir -p ~/kernel/ADC/temp/ancora_tmo_defconfig/system/modules
-cp -avr ~/kernel/kerneltools/flash scripts/adc ~/kernel/ADC/temp/ancora_tmo_defconfig/
+cp -avr ~/kernel/kerneltools/flashscripts/adc ~/kernel/ADC/temp/ancora_tmo_defconfig/
 
 #unpack original boot image
 unmkbootimg ~/kernel/boot.img 

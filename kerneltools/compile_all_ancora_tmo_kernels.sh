@@ -24,13 +24,13 @@ mkdir -p ~/kernel/KKernel/temp/ancora_tmo_oc_exuv_vhm_defconfig/
 mkdir -p ~/kernel/KKernel/temp/ancora_tmo_oc_uv_hm_defconfig/
 mkdir -p ~/kernel/KKernel/temp/ancora_tmo_oc_uv_sm_defconfig/
 mkdir -p ~/kernel/KKernel/temp/ancora_tmo_oc_uv_vhm_defconfig/
-cp -avr ~/kernel/kerneltools/flash scripts/KKernel ~/kernel/KKernel/temp/ancora_tmo_defconfig/
-cp -avr ~/kernel/kerneltools/flash scripts/KKernel ~/kernel/KKernel/temp/ancora_tmo_oc_exuv_hm_defconfig/
-cp -avr ~/kernel/kerneltools/flash scripts/KKernel ~/kernel/KKernel/temp/ancora_tmo_oc_exuv_sm_defconfig/
-cp -avr ~/kernel/kerneltools/flash scripts/KKernel ~/kernel/KKernel/temp/ancora_tmo_oc_exuv_vhm_defconfig/
-cp -avr ~/kernel/kerneltools/flash scripts/KKernel ~/kernel/KKernel/temp/ancora_tmo_oc_uv_hm_defconfig/
-cp -avr ~/kernel/kerneltools/flash scripts/KKernel ~/kernel/KKernel/temp/ancora_tmo_oc_uv_sm_defconfig/
-cp -avr ~/kernel/kerneltools/flash scripts/KKernel ~/kernel/KKernel/temp/ancora_tmo_oc_uv_vhm_defconfig/
+cp -avr ~/kernel/kerneltools/flashscripts/KKernel ~/kernel/KKernel/temp/ancora_tmo_defconfig/
+cp -avr ~/kernel/kerneltools/flashscripts/KKernel ~/kernel/KKernel/temp/ancora_tmo_oc_exuv_hm_defconfig/
+cp -avr ~/kernel/kerneltools/flashscripts/KKernel ~/kernel/KKernel/temp/ancora_tmo_oc_exuv_sm_defconfig/
+cp -avr ~/kernel/kerneltools/flashscripts/KKernel ~/kernel/KKernel/temp/ancora_tmo_oc_exuv_vhm_defconfig/
+cp -avr ~/kernel/kerneltools/flashscripts/KKernel ~/kernel/KKernel/temp/ancora_tmo_oc_uv_hm_defconfig/
+cp -avr ~/kernel/kerneltools/flashscripts/KKernel ~/kernel/KKernel/temp/ancora_tmo_oc_uv_sm_defconfig/
+cp -avr ~/kernel/kerneltools/flashscripts/KKernel ~/kernel/KKernel/temp/ancora_tmo_oc_uv_vhm_defconfig/
 mkdir -p ~/kernel/ADC/temp/ancora_tmo_defconfig/
 mkdir -p ~/kernel/KKernel/temp/ancora_tmo_defconfig/system/modules
 mkdir -p ~/kernel/KKernel/temp/ancora_tmo_oc_exuv_hm_defconfig/system/modules
@@ -40,7 +40,7 @@ mkdir -p ~/kernel/KKernel/temp/ancora_tmo_oc_uv_hm_defconfig/system/modules
 mkdir -p ~/kernel/KKernel/temp/ancora_tmo_oc_uv_sm_defconfig/system/modules
 mkdir -p ~/kernel/KKernel/temp/ancora_tmo_oc_uv_vhm_defconfig/system/modules
 mkdir -p ~/kernel/ADC/temp/ancora_tmo_defconfig/system/modules
-cp -avr ~/kernel/kerneltools/flash scripts/adc ~/kernel/ADC/temp/ancora_tmo_defconfig/
+cp -avr ~/kernel/kerneltools/flashscripts/adc ~/kernel/ADC/temp/ancora_tmo_defconfig/
 
 #unpack original boot image
 unmkbootimg ~/kernel/boot.img 

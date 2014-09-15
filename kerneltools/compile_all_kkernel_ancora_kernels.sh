@@ -22,13 +22,13 @@ mkdir -p ~/kernel/KKernel/temp/ancora_oc_exuv_vhm_defconfig/
 mkdir -p ~/kernel/KKernel/temp/ancora_oc_uv_hm_defconfig/
 mkdir -p ~/kernel/KKernel/temp/ancora_oc_uv_sm_defconfig/
 mkdir -p ~/kernel/KKernel/temp/ancora_oc_uv_vhm_defconfig/
-cp -avr ~/kernel/kerneltools/flash scripts/KKernel ~/kernel/KKernel/temp/ancora_defconfig/
-cp -avr ~/kernel/kerneltools/flash scripts/KKernel ~/kernel/KKernel/temp/ancora_oc_exuv_hm_defconfig/
-cp -avr ~/kernel/kerneltools/flash scripts/KKernel ~/kernel/KKernel/temp/ancora_oc_exuv_sm_defconfig/
-cp -avr ~/kernel/kerneltools/flash scripts/KKernel ~/kernel/KKernel/temp/ancora_oc_exuv_vhm_defconfig/
-cp -avr ~/kernel/kerneltools/flash scripts/KKernel ~/kernel/KKernel/temp/ancora_oc_uv_hm_defconfig/
-cp -avr ~/kernel/kerneltools/flash scripts/KKernel ~/kernel/KKernel/temp/ancora_oc_uv_sm_defconfig/
-cp -avr ~/kernel/kerneltools/flash scripts/KKernel ~/kernel/KKernel/temp/ancora_oc_uv_vhm_defconfig/
+cp -avr ~/kernel/kerneltools/flashscripts/KKernel ~/kernel/KKernel/temp/ancora_defconfig/
+cp -avr ~/kernel/kerneltools/flashscripts/KKernel ~/kernel/KKernel/temp/ancora_oc_exuv_hm_defconfig/
+cp -avr ~/kernel/kerneltools/flashscripts/KKernel ~/kernel/KKernel/temp/ancora_oc_exuv_sm_defconfig/
+cp -avr ~/kernel/kerneltools/flashscripts/KKernel ~/kernel/KKernel/temp/ancora_oc_exuv_vhm_defconfig/
+cp -avr ~/kernel/kerneltools/flashscripts/KKernel ~/kernel/KKernel/temp/ancora_oc_uv_hm_defconfig/
+cp -avr ~/kernel/kerneltools/flashscripts/KKernel ~/kernel/KKernel/temp/ancora_oc_uv_sm_defconfig/
+cp -avr ~/kernel/kerneltools/flashscripts/KKernel ~/kernel/KKernel/temp/ancora_oc_uv_vhm_defconfig/
 mkdir -p ~/kernel/KKernel/temp/ancora_defconfig/system/modules
 mkdir -p ~/kernel/KKernel/temp/ancora_oc_exuv_hm_defconfig/system/modules
 mkdir -p ~/kernel/KKernel/temp/ancora_oc_exuv_sm_defconfig/system/modules
