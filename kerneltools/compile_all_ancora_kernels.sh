@@ -41,6 +41,7 @@ mkdir -p ~/kernel/KKernel/temp/ancora_oc_uv_sm_defconfig/system/modules
 mkdir -p ~/kernel/KKernel/temp/ancora_oc_uv_vhm_defconfig/system/modules
 mkdir -p ~/kernel/ADC/temp/ancora_defconfig/system/modules
 cp -avr ~/kernel/kerneltools/flashscripts/adc ~/kernel/ADC/temp/ancora_defconfig/
+mkdir -p ~/kernel/toolchains
 
 #unpack original boot image
 unmkbootimg ~/kernel/boot.img 

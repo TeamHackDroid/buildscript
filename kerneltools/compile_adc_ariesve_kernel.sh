@@ -12,6 +12,7 @@ mkdir -p ~/kernel/ADC
 mkdir -p ~/kernel/ADC/temp/ariesve_defconfig/
 mkdir -p ~/kernel/ADC/temp/ariesve_defconfig/system/modules
 cp -avr ~/kernel/kerneltools/flashscripts/adc ~/kernel/ADC/temp/ariesve_defconfig/
+mkdir -p ~/kernel/toolchains
 
 #unpack original boot image
 unmkbootimg ~/kernel/boot.img 

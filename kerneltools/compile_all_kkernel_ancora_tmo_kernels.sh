@@ -36,6 +36,7 @@ mkdir -p ~/kernel/KKernel/temp/ancora_tmo_oc_exuv_vhm_defconfig/system/modules
 mkdir -p ~/kernel/KKernel/temp/ancora_tmo_oc_uv_hm_defconfig/system/modules
 mkdir -p ~/kernel/KKernel/temp/ancora_tmo_oc_uv_sm_defconfig/system/modules
 mkdir -p ~/kernel/KKernel/temp/ancora_tmo_oc_uv_vhm_defconfig/system/modules
+mkdir -p ~/kernel/toolchains
 
 #unpack original boot image
 unmkbootimg ~/kernel/boot.img 
