@@ -42,7 +42,7 @@ mkdir -p ~/kernel/toolchains
 unmkbootimg ~/kernel/boot.img 
 
 #Download/Update Kernels
-cd ~/kernel/KKernel
+cd ~/kernel/KKernel/build
 if [ -f ~/kernel/KKernel/Makefile ]; then
     repo sync
 else
@@ -84,6 +84,7 @@ zip -d KKernel-`date +%Y%m%d`-oc.zip "zImage"
 java -jar ~/kernel/kerneltools/signapk.jar ~/kernel/kerneltools/testkey.x509.pem ~/kernel/kerneltools/testkey.pk8 KKernel-`date +%Y%m%d`-oc.zip KKernel-`date +%Y%m%d`-oc_signed.zip
 
 #Make ancora_oc_exuv_hm_defconfig
+cd ~/kernel/KKernel/build
 make clean
 export ARCH=arm
 export SUBARCH=arm
@@ -106,6 +107,7 @@ zip -d KKernel-`date +%Y%m%d`-oc-exuv-hm.zip "zImage"
 java -jar ~/kernel/kerneltools/signapk.jar ~/kernel/kerneltools/testkey.x509.pem ~/kernel/kerneltools/testkey.pk8 KKernel-`date +%Y%m%d`-oc-exuv-hm.zip KKernel-`date +%Y%m%d`-oc-exuv-hm_signed.zip
 
 #Make ancora_oc_exuv_sm_defconfig
+cd ~/kernel/KKernel/build
 make clean
 export ARCH=arm
 export SUBARCH=arm
@@ -128,6 +130,7 @@ zip -d KKernel-`date +%Y%m%d`-oc-exuv-sm.zip "zImage"
 java -jar ~/kernel/kerneltools/signapk.jar ~/kernel/kerneltools/testkey.x509.pem ~/kernel/kerneltools/testkey.pk8 KKernel-`date +%Y%m%d`-oc-exuv-sm.zip KKernel-`date +%Y%m%d`-oc-exuv-sm_signed.zip
 
 #Make ancora_oc_exuv_vhm_defconfig
+cd ~/kernel/KKernel/build
 make clean
 export ARCH=arm
 export SUBARCH=arm
@@ -150,6 +153,7 @@ zip -d KKernel-`date +%Y%m%d`-oc-exuv-vhm.zip "zImage"
 java -jar ~/kernel/kerneltools/signapk.jar ~/kernel/kerneltools/testkey.x509.pem ~/kernel/kerneltools/testkey.pk8 KKernel-`date +%Y%m%d`-oc-exuv-vhm.zip KKernel-`date +%Y%m%d`-oc-exuv-vhm_signed.zip
 
 #Make ancora_oc_exuv_xhm_defconfig
+#cd ~/kernel/KKernel/build
 #make clean
 #export ARCH=arm
 #export SUBARCH=arm
@@ -172,6 +176,7 @@ java -jar ~/kernel/kerneltools/signapk.jar ~/kernel/kerneltools/testkey.x509.pem
 #java -jar ~/kernel/kerneltools/signapk.jar ~/kernel/kerneltools/testkey.x509.pem ~/kernel/kerneltools/testkey.pk8 KKernel-`date +%Y%m%d`-oc-exuv-xhm.zip KKernel-`date +%Y%m%d`-oc-exuv-xhm_signed.zip
 
 #Make ancora_oc_uv_hm_defconfig
+cd ~/kernel/KKernel/build
 make clean
 export ARCH=arm
 export SUBARCH=arm
@@ -194,6 +199,7 @@ zip -d KKernel-`date +%Y%m%d`-oc-uv-hm.zip "zImage"
 java -jar ~/kernel/kerneltools/signapk.jar ~/kernel/kerneltools/testkey.x509.pem ~/kernel/kerneltools/testkey.pk8 KKernel-`date +%Y%m%d`-oc-uv-hm.zip KKernel-`date +%Y%m%d`-oc-uv-hm_signed.zip
 
 #Make ancora_oc_uv_sm_defconfig
+cd ~/kernel/KKernel/build
 make clean
 export ARCH=arm
 export SUBARCH=arm
@@ -216,6 +222,7 @@ zip -d KKernel-`date +%Y%m%d`-oc-uv-sm.zip "zImage"
 java -jar ~/kernel/kerneltools/signapk.jar ~/kernel/kerneltools/testkey.x509.pem ~/kernel/kerneltools/testkey.pk8 KKernel-`date +%Y%m%d`-oc-uv-sm.zip KKernel-`date +%Y%m%d`-oc-uv-sm_signed.zip
 
 #Make ancora_oc_uv_vhm_defconfig
+cd ~/kernel/KKernel/build
 make clean
 export ARCH=arm
 export SUBARCH=arm
@@ -238,6 +245,7 @@ zip -d KKernel-`date +%Y%m%d`-oc-uv-vhm.zip "zImage"
 java -jar ~/kernel/kerneltools/signapk.jar ~/kernel/kerneltools/testkey.x509.pem ~/kernel/kerneltools/testkey.pk8 KKernel-`date +%Y%m%d`-oc-uv-vhm.zip KKernel-`date +%Y%m%d`-oc-uv-vhm_signed.zip
 
 #Make ancora_oc_uv_xhm_defconfig
+#cd ~/kernel/KKernel/build
 #make clean
 #export ARCH=arm
 #export SUBARCH=arm

@@ -18,7 +18,7 @@ mkdir -p ~/kernel/toolchains
 unmkbootimg ~/kernel/boot.img 
 
 #Download/Update Kernels
-cd ~/kernel/ADC
+cd ~/kernel/ADC/build
 if [ -f ~/kernel/ADC/Makefile ]; then
     repo sync
 else
